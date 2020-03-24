@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TicTacToe
 {
-    class BoardView
+    public class BoardView
     {
         private readonly BoardModel _model;
 
@@ -13,16 +13,15 @@ namespace TicTacToe
             _model = model;
         }
 
-        public void Show()
+        public string Show()
         {
-            Console.WriteLine(
-                "  a b c\n" +
-                " ┌─────┐\n" +
-                $"1│{GetSquare(0)} {GetSquare(1)} {GetSquare(2)}│\n" +
-                $"2│{GetSquare(3)} {GetSquare(4)} {GetSquare(5)}│\n" +
-                $"3│{GetSquare(6)} {GetSquare(7)} {GetSquare(8)}│\n" +
-                " └─────┘"
-            );
+            return
+                "  a b c\r\n" +
+                " ┌─────┐\r\n" +
+                $"1│{GetSquare(0)} {GetSquare(1)} {GetSquare(2)}│\r\n" +
+                $"2│{GetSquare(3)} {GetSquare(4)} {GetSquare(5)}│\r\n" +
+                $"3│{GetSquare(6)} {GetSquare(7)} {GetSquare(8)}│\r\n" +
+                " └─────┘";
         }
 
         char GetSquare(int index )
