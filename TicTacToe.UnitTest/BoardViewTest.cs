@@ -22,6 +22,21 @@ namespace TicTacToe.UnitTest
  └─────┘";
             Assert.AreEqual(expected, boardView.Show());
         }
-    }
 
+        [Test]
+        public void Test2()
+        {
+            var boardModel = new BoardModel();
+            boardModel.Fill("a3", 1);
+            boardModel.Fill("a2", 2);
+            var boardView = new BoardView(boardModel);
+            const string expected = @"  a b c
+ ┌─────┐
+1│     │
+2│o    │
+3│x    │
+ └─────┘";
+            Assert.AreEqual(expected, boardView.Show());
+        }
+    }
 }
