@@ -6,7 +6,7 @@ namespace TicTacToe
 {
     class BoardView
     {
-        private BoardModel _model;
+        private readonly BoardModel _model;
 
         public BoardView(BoardModel model)
         {

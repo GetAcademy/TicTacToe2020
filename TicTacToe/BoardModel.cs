@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TicTacToe
 {
-    class BoardModel
+    public class BoardModel
     {
         /*
          * 0 betyr blank
@@ -27,6 +27,7 @@ namespace TicTacToe
 
         public void Fill(string position, int squareContent)
         {
+            if (squareContent != 1 && squareContent != 2) return;
             // gitt at position == 'a2'
             var colChar = position[0];
             var rowChar = position[1];
